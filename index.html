@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TECROD — Tecnologías Rodríguez</title>
+  <meta name="description" content="TECROD: ingeniería, simulación, diseño y prototipado." />
+  <style>
+    :root { --max: 980px; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; line-height: 1.55; }
+    header { padding: 56px 16px; border-bottom: 1px solid #eee; }
+    main { padding: 28px 16px 56px; }
+    .wrap { max-width: var(--max); margin: 0 auto; }
+    .tag { display:inline-block; padding:6px 10px; border:1px solid #eee; border-radius:999px; margin:6px 8px 0 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:16px; }
+    .card { border:1px solid #eee; border-radius:16px; padding:16px; }
+    a { color: inherit; }
+    footer { padding: 24px 16px; border-top: 1px solid #eee; color:#666; }
+    .cta { display:inline-block; margin-top:14px; padding:10px 14px; border:1px solid #111; border-radius:12px; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="tag">TECROD</div>
+      <h1>Tecnologías Rodríguez</h1>
+      <p>Ingeniería aplicada: simulación (CFD/FEA), diseño de producto, automatización y prototipado.</p>
+      <a class="cta" href="#contacto">Contactar</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Servicios</h2>
+      <div class="grid">
+        <div class="card"><h3>Simulación</h3><p>CFD/FEA, análisis comparativo, reportes y recomendaciones.</p></div>
+        <div class="card"><h3>Diseño</h3><p>CAD, DFM, iteración rápida y soporte a fabricación.</p></div>
+        <div class="card"><h3>Prototipado</h3><p>Impresión 3D y pruebas básicas para validar hipótesis.</p></div>
+      </div>
+    </section>
+
+    <section style="margin-top:28px;">
+      <h2>Proyectos (selección)</h2>
+      <div class="grid">
+        <div class="card"><h3>TECROD Labs</h3><p>R&D de conceptos aero/energía y manufactura avanzada.</p></div>
+        <div class="card"><h3>Automatización</h3><p>Macros/Tools para acelerar workflows de ingeniería.</p></div>
+      </div>
+    </section>
+
+    <section id="contacto" style="margin-top:28px;">
+      <h2>Contacto</h2>
+      <p>
+        Email: <a href="mailto:tu-correo@dominio.com">tu-correo@dominio.com</a><br/>
+        GitHub: <a href="https://github.com/">github.com/tuusuario</a><br/>
+        LinkedIn: <a href="https://www.linkedin.com/">(tu perfil)</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="y"></span> TECROD — Tecnologías Rodríguez</div>
+  </footer>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,66 +1,139 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TECROD — Tecnologías Rodríguez</title>
-  <meta name="description" content="TECROD: ingeniería, simulación, diseño y prototipado." />
-  <style>
-    :root { --max: 980px; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; line-height: 1.55; }
-    header { padding: 56px 16px; border-bottom: 1px solid #eee; }
-    main { padding: 28px 16px 56px; }
-    .wrap { max-width: var(--max); margin: 0 auto; }
-    .tag { display:inline-block; padding:6px 10px; border:1px solid #eee; border-radius:999px; margin:6px 8px 0 0; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:16px; }
-    .card { border:1px solid #eee; border-radius:16px; padding:16px; }
-    a { color: inherit; }
-    footer { padding: 24px 16px; border-top: 1px solid #eee; color:#666; }
-    .cta { display:inline-block; margin-top:14px; padding:10px 14px; border:1px solid #111; border-radius:12px; text-decoration:none; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TECROD — Advanced Technology & Innovation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <header>
-    <div class="wrap">
-      <div class="tag">TECROD</div>
-      <h1>Tecnologías Rodríguez</h1>
-      <p>Ingeniería aplicada: simulación (CFD/FEA), diseño de producto, automatización y prototipado.</p>
-      <a class="cta" href="#contacto">Contactar</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="TECROD Home">
+        <!-- Logo simple (puedes reemplazarlo por tu SVG) -->
+        <svg class="brand__mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M32 6L14 58h36L32 6Z" stroke="currentColor" stroke-width="2"/>
+          <path d="M32 18v40" stroke="currentColor" stroke-width="2"/>
+          <path d="M22 34h20" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span class="brand__name">TECROD</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn--primary" href="#contact">Get a quote</a>
     </div>
   </header>
 
-  <main class="wrap">
-    <section>
-      <h2>Servicios</h2>
-      <div class="grid">
-        <div class="card"><h3>Simulación</h3><p>CFD/FEA, análisis comparativo, reportes y recomendaciones.</p></div>
-        <div class="card"><h3>Diseño</h3><p>CAD, DFM, iteración rápida y soporte a fabricación.</p></div>
-        <div class="card"><h3>Prototipado</h3><p>Impresión 3D y pruebas básicas para validar hipótesis.</p></div>
+  <!-- Hero -->
+  <main id="home">
+    <section class="hero">
+      <div class="hero__bg" role="img" aria-label="Hypersonic vehicle hero image"></div>
+
+      <div class="container hero__content">
+        <div class="hero__text">
+          <h1>ADVANCED TECHNOLOGY<br/> &amp; INNOVATION</h1>
+          <p>
+            Developing cutting-edge aerospace, simulation, and advanced manufacturing solutions for the future.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--ghost" href="#services">Learn More</a>
+            <a class="btn btn--outline" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <section id="services" class="cards" aria-label="Services">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">✈️</div>
+            <h3>Hypersonic Systems</h3>
+            <p>CFD/FEA, aero design, ducts/rotors, and performance optimization for advanced flows.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">⚙️</div>
+            <h3>Innovative Solutions</h3>
+            <p>Rapid prototyping, automation, macros, and engineering tools tailored to your needs.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">🧪</div>
+            <h3>Research &amp; Development</h3>
+            <p>Concept studies, validation, and technology roadmaps from idea to demonstrator.</p>
+          </article>
+        </section>
       </div>
     </section>
 
-    <section style="margin-top:28px;">
-      <h2>Proyectos (selección)</h2>
-      <div class="grid">
-        <div class="card"><h3>TECROD Labs</h3><p>R&D de conceptos aero/energía y manufactura avanzada.</p></div>
-        <div class="card"><h3>Automatización</h3><p>Macros/Tools para acelerar workflows de ingeniería.</p></div>
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container about__grid">
+        <div class="about__media" aria-label="Texture image">
+          <div class="about__img"></div>
+        </div>
+
+        <div class="about__text">
+          <h2>About TECROD</h2>
+          <p>
+            TECROD is a forward-thinking engineering and innovation studio focused on aerospace-grade
+            design, simulation, and advanced manufacturing. We build elegant solutions that perform in reality.
+          </p>
+
+          <ul class="about__bullets">
+            <li>CFD/FEA consulting + design iterations</li>
+            <li>Prototyping &amp; test-driven engineering</li>
+            <li>Automation tools for faster engineering cycles</li>
+          </ul>
+
+          <a class="btn btn--primary" href="#contact">Start a project</a>
+        </div>
       </div>
     </section>
 
-    <section id="contacto" style="margin-top:28px;">
-      <h2>Contacto</h2>
-      <p>
-        Email: <a href="mailto:tu-correo@dominio.com">tu-correo@dominio.com</a><br/>
-        GitHub: <a href="https://github.com/">github.com/tuusuario</a><br/>
-        LinkedIn: <a href="https://www.linkedin.com/">(tu perfil)</a>
-      </p>
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container contact__inner">
+        <h2>Contact</h2>
+        <p>Tell us what you’re building. We’ll respond with a clear plan and a quote.</p>
+
+        <!-- Esto es un placeholder. Luego lo conectas a un Google Form, Formspree, etc. -->
+        <div class="contact__box">
+          <div class="contact__row">
+            <div>
+              <div class="contact__label">Email</div>
+              <div class="contact__value">hello@tecrod.com</div>
+            </div>
+            <div>
+              <div class="contact__label">Location</div>
+              <div class="contact__value">Chihuahua, MX</div>
+            </div>
+          </div>
+          <a class="btn btn--outline" href="mailto:hello@tecrod.com">Email now</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">© <span id="y"></span> TECROD — Tecnologías Rodríguez</div>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> TECROD. All rights reserved.</span>
+      <span class="footer__small">Engineering • Simulation • Innovation</span>
+    </div>
   </footer>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

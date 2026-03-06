@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TECROD — Ingeniería avanzada e innovación</title>
-  <meta name="description" content="Diseño basado en simulación, prototipado rápido y automatización de ingeniería para rendimiento de nivel aeroespacial." />
+  <title>TECROD - Ingeniería avanzada e innovación</title>
+  <meta name="description" content="Diseño basado en simulación, prototipado rápido y automatización de ingeniería para desempeño de nivel aeroespacial." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,21 +13,21 @@
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="#home" aria-label="TECROD Home">
-        <span class="brand__mark"><img src="../assets/tecrod-logo.png" alt="TECROD logo"></span>
+      <a class="brand" href="#home" aria-label="Inicio TECROD">
+        <span class="brand__mark"><img src="../assets/tecrod-logo.png" alt="Logo TECROD"></span>
         <span class="brand__name">TECROD</span>
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#home">Inicio</a>
-        <a href="#services">Servicios</a>
-        <a href="#work">Proyectos</a>
-        <a href="#about">Acerca</a>
-        <a href="#contact">Contacto</a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <div class="header__right">
-        <div class="lang" aria-label="Language switch">
+        <div class="lang" aria-label="Cambio de idioma">
           <button type="button" data-lang="en">EN</button>
           <button type="button" data-lang="es">ES</button>
         </div>
@@ -38,55 +38,81 @@
 
   <main id="home">
     <section class="hero">
-      <div class="hero__bg" role="img" aria-label="Aerospace hero background"></div>
-
+      <div class="hero__bg" role="img" aria-label="Fondo aeroespacial"></div>
       <div class="container hero__content">
         <div class="hero__text">
-          <h1>INGENIERÍA AVANZADA<br/>E INNOVACIÓN</h1>
-          <p>Diseño basado en simulación, prototipado rápido y automatización de ingeniería para rendimiento de nivel aeroespacial.</p>
+          <h1>Ingeniería avanzada para innovación aeroespacial</h1>
+          <p>Diseño por simulación, análisis técnico riguroso y prototipado rápido para sistemas de alto desempeño.</p>
           <div class="hero__cta">
-            <a class="btn btn--ghost" href="#services">Ver servicios</a>
-            <a class="btn btn--outline" href="#work">Ver proyectos</a>
+            <a class="btn btn--primary" href="#contact">Solicitar cotización</a>
+            <a class="btn btn--outline" href="#work">Ver trabajo</a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <section id="services" class="cards" aria-label="Services">
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Servicios</h2>
+        <p>Soporte especializado en simulación, diseño, prototipado y automatización de ingeniería.</p>
+        <div class="cards" aria-label="Servicios">
           <article class="card">
-  <div class="card__icon" aria-hidden="true">✈️</div>
-  <h3>Sistemas hipersónicos</h3>
-  <p>Análisis aerodinámico y optimización basada en CFD para geometrías complejas y flujos exigentes.</p>
-</article>
-<article class="card">
-  <div class="card__icon" aria-hidden="true">⚙️</div>
-  <h3>Soluciones innovadoras</h3>
-  <p>Diseño iterativo con enfoque en manufactura, desempeño y validación práctica.</p>
-</article>
-<article class="card">
-  <div class="card__icon" aria-hidden="true">🧪</div>
-  <h3>I+D (R&D)</h3>
-  <p>Estudios de factibilidad, arquitectura de sistemas y rutas tecnológicas para llevar ideas a realidad.</p>
-</article>
-        </section>
+            <h3>CFD y Aerodinámica</h3>
+            <p>Simulaciones de flujo y aerodinámica para decisiones de diseño orientadas al desempeño.</p>
+          </article>
+          <article class="card">
+            <h3>Estructural / FEA y Optimización</h3>
+            <p>Validación estructural, ciclos de optimización y estudios de trade-off técnicos.</p>
+          </article>
+          <article class="card">
+            <h3>Turbomaquinaria y Ducted Fans</h3>
+            <p>Análisis rotor-estator, mejora de eficiencia e iteraciones con enfoque en ruido.</p>
+          </article>
+          <article class="card">
+            <h3>Prototipado Rápido (Aditivo)</h3>
+            <p>Ciclos rápidos de concepto a prueba con manufactura aditiva y estrategia de construcción.</p>
+          </article>
+          <article class="card">
+            <h3>Automatización de Ingeniería (Macros/Herramientas)</h3>
+            <p>Macros y herramientas personalizadas para reducir tareas repetitivas y acelerar ciclos.</p>
+          </article>
+          <article class="card">
+            <h3>I+D / Estudios de Concepto</h3>
+            <p>Factibilidad y exploración de arquitectura técnica para innovación en etapas tempranas.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section id="work" class="section">
       <div class="container">
         <h2>Proyectos destacados</h2>
-        <p>Selección breve de capacidades y tipos de proyectos (sin revelar IP de clientes).</p>
-        <div class="kpis">
-          <div class="kpi">
-  <div class="value">Reducción de ruido en ducted-fan</div>
-  <div class="desc">Iteraciones rotor–estator con enfoque en espectro acústico y desempeño.</div>
-</div>
-<div class="kpi">
-  <div class="value">Optimización paramétrica CFD/DOE</div>
-  <div class="desc">Exploración de diseño con variables críticas y selección por eficiencia/robustez.</div>
-</div>
-<div class="kpi">
-  <div class="value">Automatización CAD y macros</div>
-  <div class="desc">Herramientas para acelerar ciclos de ingeniería y reducir trabajo repetitivo.</div>
-</div>
+        <p>Casos seleccionados con objetivo, método y resultado (sin exponer IP de clientes).</p>
+        <div class="cases">
+          <article class="case">
+            <h3>Estudio de reducción de ruido en ducted fan</h3>
+            <p><strong>Objetivo:</strong> Reducir ruido tonal manteniendo respuesta de empuje.</p>
+            <p><strong>Método:</strong> Iteración rotor-estator con CFD y comparación de tendencias acústicas.</p>
+            <p><strong>Resultado:</strong> Disminución de picos de ruido clave con desempeño aerodinámico estable.</p>
+          </article>
+          <article class="case">
+            <h3>Validación iterativa de prototipo rotor-estator</h3>
+            <p><strong>Objetivo:</strong> Mejorar eficiencia en condiciones operativas relevantes.</p>
+            <p><strong>Método:</strong> Bucle de diseño por simulación y verificación controlada con prototipo.</p>
+            <p><strong>Resultado:</strong> Tendencia de eficiencia mejorada y mayor confianza antes de escalar.</p>
+          </article>
+          <article class="case">
+            <h3>Macro de automatización para flujos CAD</h3>
+            <p><strong>Objetivo:</strong> Eliminar preparación repetitiva de geometría y documentación.</p>
+            <p><strong>Método:</strong> Desarrollo de macro CAD basada en reglas, integrada al flujo diario.</p>
+            <p><strong>Resultado:</strong> Ciclos de iteración más rápidos y menos errores de transferencia manual.</p>
+          </article>
+          <article class="case">
+            <h3>Optimización paramétrica CFD</h3>
+            <p><strong>Objetivo:</strong> Identificar diseños robustos con restricciones multivariable.</p>
+            <p><strong>Método:</strong> Barrido DOE y corridas CFD de alta fidelidad enfocadas.</p>
+            <p><strong>Resultado:</strong> Mapa de decisión claro y candidatos de geometría priorizados.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -94,32 +120,43 @@
     <section id="process" class="section">
       <div class="container">
         <h2>Proceso</h2>
-        <p>Un flujo de trabajo repetible para entregar resultados medibles.</p>
-        <div class="kpis">
-          <div class="kpi">
-  <div class="value">1) Descubrimiento</div>
-  <div class="desc">Requerimientos, restricciones, métricas y definición de entregables.</div>
-</div>
-<div class="kpi">
-  <div class="value">2) Simulación + iteración</div>
-  <div class="desc">CFD/FEA, trade studies, convergencia y mejora progresiva.</div>
-</div>
-<div class="kpi">
-  <div class="value">3) Validación</div>
-  <div class="desc">Prototipo/pruebas cuando aplica; verificación por evidencia.</div>
-</div>
+        <p>Flujo repetible para resultados técnicos de alta calidad.</p>
+        <div class="steps">
+          <article class="step">
+            <h3>Paso 1: Discovery & Requirements</h3>
+            <p>Definición de objetivos, restricciones, métricas y alcance de entregables.</p>
+          </article>
+          <article class="step">
+            <h3>Paso 2: Simulation / Design Iterations</h3>
+            <p>Evaluaciones CFD/FEA e iteración de diseño con criterios medibles.</p>
+          </article>
+          <article class="step">
+            <h3>Paso 3: Prototype / Test (si aplica)</h3>
+            <p>Planeación de prototipo y validación práctica cuando se requiere evidencia física.</p>
+          </article>
+          <article class="step">
+            <h3>Paso 4: Delivery</h3>
+            <p>Reporte técnico, paquete CAD y recomendaciones listas para implementación.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="about" class="section">
       <div class="container grid2">
-        <div class="media" aria-label="About image"><div class="media__img"></div></div>
+        <div class="media" aria-label="Imagen sobre TECROD"><div class="media__img"></div></div>
         <div>
-          <h2>Acerca de TECROD</h2>
-          <p>TECROD es un estudio de ingeniería e innovación enfocado en diseño avanzado, simulación y prototipado. Construimos soluciones elegantes que funcionan en la realidad.</p>
+          <h2>Sobre TECROD</h2>
+          <p>TECROD es un estudio de ingeniería enfocado en diseño avanzado, simulación y prototipado.</p>
+          <p>Trabajamos en proyectos donde importan el desempeño aerodinámico, la confiabilidad estructural y la velocidad de desarrollo.</p>
+          <p>Nuestros métodos combinan requerimientos claros, decisiones respaldadas por simulación y rutas de validación práctica.</p>
+          <p>Las disciplinas incluyen CFD, FEA, turbomaquinaria, prototipado aditivo y automatización de ingeniería.</p>
+          <p>Los entregables están estructurados para ejecutar: reportes, salidas CAD y recomendaciones implementables.</p>
+          <p>Cada colaboración se gestiona con confidencialidad y trazabilidad técnica como principios centrales.</p>
           <ul class="bullets">
-            <li>Diseño basado en evidencia: simulación → iteración → validación.</li><li>Experiencia en aero/turbomaquinaria, manufactura aditiva y automatización.</li><li>Entregables claros: CAD, reportes, gráficas y recomendaciones accionables.</li>
+            <li>Flujo basado en evidencia: simulación -> iteración -> validación.</li>
+            <li>Enfoque multidisciplinario con resultados de ingeniería aplicables.</li>
+            <li>Comunicación clara y entregables listos para implementación.</li>
           </ul>
           <a class="btn btn--primary" href="#contact">Solicitar cotización</a>
         </div>
@@ -128,32 +165,49 @@
 
     <section id="contact" class="section">
       <div class="container">
-        <h2>Contacto</h2>
-        <p>Cuéntanos qué estás construyendo. Respondemos con un plan claro y una cotización.</p>
+        <h2>Contacto / Cotización</h2>
+        <p>Cuéntanos tu reto y plazo estimado. Te respondemos con un siguiente paso claro para cotizar.</p>
 
         <div class="contact__box">
-          <div class="contact__row">
-            <div>
-              <div class="contact__label">Email</div>
-              <div class="contact__value">hello@tecrod.com</div>
-            </div>
-            <div>
-              <div class="contact__label">Location</div>
-              <div class="contact__value">Chihuahua, MX</div>
-            </div>
-          </div>
-          <a class="btn btn--outline" href="mailto:hello@tecrod.com">Email</a>
-        </div>
+          <form class="contact__form" action="mailto:hello@tecrod.com" method="post" enctype="text/plain">
+            <label for="name-es">Nombre</label>
+            <input id="name-es" name="nombre" type="text" required>
 
-        <p style="margin-top:14px;color:rgba(255,255,255,.62);font-size:12.5px">Tip: luego conectamos un formulario (Formspree/Netlify/Google Forms) para que lleguen solicitudes sin depender del mail.</p>
+            <label for="company-es">Empresa</label>
+            <input id="company-es" name="empresa" type="text">
+
+            <label for="problem-es">Problema del proyecto</label>
+            <textarea id="problem-es" name="problema" rows="4" required></textarea>
+
+            <label for="deadline-es">Plazo</label>
+            <input id="deadline-es" name="plazo" type="text" placeholder="ej. 4 a 8 semanas">
+
+            <label for="budget-es">Presupuesto estimado (opcional)</label>
+            <input id="budget-es" name="presupuesto" type="text" placeholder="ej. MXN 100,000 - 350,000">
+
+            <button class="btn btn--primary" type="submit">Enviar solicitud</button>
+          </form>
+
+          <div class="contact__direct">
+            <div class="contact__label">Email directo</div>
+            <div class="contact__value"><a href="mailto:hello@tecrod.com">hello@tecrod.com</a></div>
+            <div class="contact__label">Ubicación</div>
+            <div class="contact__value">Chihuahua, MX</div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span>© <span id="year"></span> TECROD. Todos los derechos reservados.</span>
-      <span class="footer__small">Engineering • Simulation • Innovation</span>
+      <span>&copy; <span id="year"></span> TECROD. Todos los derechos reservados.</span>
+      <div class="footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
   </footer>
 

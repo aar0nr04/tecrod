@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TECROD — Ingeniería avanzada e innovación</title>
+  <meta name="description" content="Diseño basado en simulación, prototipado rápido y automatización de ingeniería para rendimiento de nivel aeroespacial." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="TECROD Home">
+        <span class="brand__mark"><img src="../assets/tecrod-logo.png" alt="TECROD logo"></span>
+        <span class="brand__name">TECROD</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#home">Inicio</a>
+        <a href="#services">Servicios</a>
+        <a href="#work">Proyectos</a>
+        <a href="#about">Acerca</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+
+      <div class="header__right">
+        <div class="lang" aria-label="Language switch">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="es">ES</button>
+        </div>
+        <a class="btn btn--primary" href="#contact">Solicitar cotización</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero__bg" role="img" aria-label="Aerospace hero background"></div>
+
+      <div class="container hero__content">
+        <div class="hero__text">
+          <h1>INGENIERÍA AVANZADA<br/>E INNOVACIÓN</h1>
+          <p>Diseño basado en simulación, prototipado rápido y automatización de ingeniería para rendimiento de nivel aeroespacial.</p>
+          <div class="hero__cta">
+            <a class="btn btn--ghost" href="#services">Ver servicios</a>
+            <a class="btn btn--outline" href="#work">Ver proyectos</a>
+          </div>
+        </div>
+
+        <section id="services" class="cards" aria-label="Services">
+          <article class="card">
+  <div class="card__icon" aria-hidden="true">✈️</div>
+  <h3>Sistemas hipersónicos</h3>
+  <p>Análisis aerodinámico y optimización basada en CFD para geometrías complejas y flujos exigentes.</p>
+</article>
+<article class="card">
+  <div class="card__icon" aria-hidden="true">⚙️</div>
+  <h3>Soluciones innovadoras</h3>
+  <p>Diseño iterativo con enfoque en manufactura, desempeño y validación práctica.</p>
+</article>
+<article class="card">
+  <div class="card__icon" aria-hidden="true">🧪</div>
+  <h3>I+D (R&D)</h3>
+  <p>Estudios de factibilidad, arquitectura de sistemas y rutas tecnológicas para llevar ideas a realidad.</p>
+</article>
+        </section>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="container">
+        <h2>Proyectos destacados</h2>
+        <p>Selección breve de capacidades y tipos de proyectos (sin revelar IP de clientes).</p>
+        <div class="kpis">
+          <div class="kpi">
+  <div class="value">Reducción de ruido en ducted-fan</div>
+  <div class="desc">Iteraciones rotor–estator con enfoque en espectro acústico y desempeño.</div>
+</div>
+<div class="kpi">
+  <div class="value">Optimización paramétrica CFD/DOE</div>
+  <div class="desc">Exploración de diseño con variables críticas y selección por eficiencia/robustez.</div>
+</div>
+<div class="kpi">
+  <div class="value">Automatización CAD y macros</div>
+  <div class="desc">Herramientas para acelerar ciclos de ingeniería y reducir trabajo repetitivo.</div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="container">
+        <h2>Proceso</h2>
+        <p>Un flujo de trabajo repetible para entregar resultados medibles.</p>
+        <div class="kpis">
+          <div class="kpi">
+  <div class="value">1) Descubrimiento</div>
+  <div class="desc">Requerimientos, restricciones, métricas y definición de entregables.</div>
+</div>
+<div class="kpi">
+  <div class="value">2) Simulación + iteración</div>
+  <div class="desc">CFD/FEA, trade studies, convergencia y mejora progresiva.</div>
+</div>
+<div class="kpi">
+  <div class="value">3) Validación</div>
+  <div class="desc">Prototipo/pruebas cuando aplica; verificación por evidencia.</div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container grid2">
+        <div class="media" aria-label="About image"><div class="media__img"></div></div>
+        <div>
+          <h2>Acerca de TECROD</h2>
+          <p>TECROD es un estudio de ingeniería e innovación enfocado en diseño avanzado, simulación y prototipado. Construimos soluciones elegantes que funcionan en la realidad.</p>
+          <ul class="bullets">
+            <li>Diseño basado en evidencia: simulación → iteración → validación.</li><li>Experiencia en aero/turbomaquinaria, manufactura aditiva y automatización.</li><li>Entregables claros: CAD, reportes, gráficas y recomendaciones accionables.</li>
+          </ul>
+          <a class="btn btn--primary" href="#contact">Solicitar cotización</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p>Cuéntanos qué estás construyendo. Respondemos con un plan claro y una cotización.</p>
+
+        <div class="contact__box">
+          <div class="contact__row">
+            <div>
+              <div class="contact__label">Email</div>
+              <div class="contact__value">hello@tecrod.com</div>
+            </div>
+            <div>
+              <div class="contact__label">Location</div>
+              <div class="contact__value">Chihuahua, MX</div>
+            </div>
+          </div>
+          <a class="btn btn--outline" href="mailto:hello@tecrod.com">Email</a>
+        </div>
+
+        <p style="margin-top:14px;color:rgba(255,255,255,.62);font-size:12.5px">Tip: luego conectamos un formulario (Formspree/Netlify/Google Forms) para que lleguen solicitudes sin depender del mail.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> TECROD. Todos los derechos reservados.</span>
+      <span class="footer__small">Engineering • Simulation • Innovation</span>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

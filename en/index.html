@@ -14,7 +14,7 @@
   <header class="header">
     <div class="container header__inner">
       <a class="brand" href="#home" aria-label="TECROD Home">
-        <span class="brand__mark"><img src="../assets/tecrod-logo.png" alt="TECROD logo"></span>
+        <span class="brand__mark"><img class="brand__logo" src="../assets/tecrod-logo-dark.png" data-logo-dark="../assets/tecrod-logo-dark.png" data-logo-light="../assets/tecrod-logo-light.png" alt="TECROD logo"></span>
         <span class="brand__name">TECROD</span>
       </a>
 
@@ -27,6 +27,10 @@
       </nav>
 
       <div class="header__right">
+        <div class="theme" aria-label="Theme switch">
+          <button type="button" data-theme-toggle="dark">Dark</button>
+          <button type="button" data-theme-toggle="light">Light</button>
+        </div>
         <div class="lang" aria-label="Language switch">
           <button type="button" data-lang="en">EN</button>
           <button type="button" data-lang="es">ES</button>
@@ -214,3 +218,5 @@
   <script src="../script.js"></script>
 </body>
 </html>
+
+

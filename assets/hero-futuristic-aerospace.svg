@@ -1,0 +1,105 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030917"/>
+      <stop offset="45%" stop-color="#071b3a"/>
+      <stop offset="100%" stop-color="#0b2f64"/>
+    </linearGradient>
+
+    <radialGradient id="rightGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1980 760) rotate(20) scale(980 720)">
+      <stop offset="0%" stop-color="#3ac0ff" stop-opacity="0.28"/>
+      <stop offset="55%" stop-color="#1b7fd8" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#0a2f60" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7ad6ff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#87ddff" stop-opacity="0.62"/>
+      <stop offset="100%" stop-color="#44b9ff" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <linearGradient id="latticeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b7f0ff" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#56beff" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="rightZone">
+      <rect x="900" y="0" width="1660" height="1440"/>
+    </clipPath>
+  </defs>
+
+  <rect width="2560" height="1440" fill="url(#bg)"/>
+  <rect width="2560" height="1440" fill="url(#rightGlow)"/>
+
+  <!-- Left-side quiet area for headline text -->
+  <rect x="0" y="0" width="1180" height="1440" fill="#020915" fill-opacity="0.34"/>
+
+  <!-- CFD-style streamlines -->
+  <g clip-path="url(#rightZone)" filter="url(#softGlow)">
+    <path d="M860 300 C1220 180, 1660 220, 2560 120" stroke="url(#lineGrad)" stroke-width="2.2"/>
+    <path d="M820 360 C1200 230, 1700 270, 2560 170" stroke="url(#lineGrad)" stroke-width="1.8"/>
+    <path d="M780 430 C1180 300, 1740 340, 2560 250" stroke="url(#lineGrad)" stroke-width="1.7"/>
+    <path d="M760 510 C1180 390, 1780 430, 2560 360" stroke="url(#lineGrad)" stroke-width="1.6"/>
+    <path d="M750 600 C1200 500, 1800 520, 2560 500" stroke="url(#lineGrad)" stroke-width="1.5"/>
+    <path d="M760 690 C1230 610, 1830 600, 2560 640" stroke="url(#lineGrad)" stroke-width="1.45"/>
+    <path d="M790 790 C1270 730, 1860 700, 2560 790" stroke="url(#lineGrad)" stroke-width="1.45"/>
+    <path d="M840 900 C1320 850, 1910 790, 2560 950" stroke="url(#lineGrad)" stroke-width="1.5"/>
+    <path d="M900 1020 C1380 980, 1940 900, 2560 1120" stroke="url(#lineGrad)" stroke-width="1.7"/>
+    <path d="M980 1140 C1450 1100, 1990 1010, 2560 1290" stroke="url(#lineGrad)" stroke-width="1.95"/>
+  </g>
+
+  <!-- Aerodynamic contour hints -->
+  <g opacity="0.42" filter="url(#softGlow)">
+    <ellipse cx="1900" cy="760" rx="470" ry="180" stroke="#8de3ff" stroke-opacity="0.45" stroke-width="1.4"/>
+    <ellipse cx="1920" cy="760" rx="620" ry="240" stroke="#7dd8ff" stroke-opacity="0.22" stroke-width="1.2"/>
+    <ellipse cx="1960" cy="760" rx="780" ry="315" stroke="#6ccfff" stroke-opacity="0.14" stroke-width="1"/>
+  </g>
+
+  <!-- High-tech lattice cluster on right -->
+  <g transform="translate(1700 280)" opacity="0.72">
+    <g stroke="url(#latticeGrad)" stroke-width="1.2" fill="none">
+      <path d="M0 0 L540 260 L420 760 L-120 500 Z"/>
+      <path d="M60 48 L500 260 L396 712 L-60 492 Z"/>
+      <path d="M120 92 L462 260 L370 668 L0 488 Z"/>
+      <path d="M180 136 L426 260 L346 626 L58 488 Z"/>
+      <path d="M240 174 L392 260 L322 586 L112 490 Z"/>
+
+      <path d="M0 0 L120 92"/>
+      <path d="M60 48 L180 136"/>
+      <path d="M120 92 L240 174"/>
+      <path d="M180 136 L300 212"/>
+      <path d="M240 174 L360 240"/>
+      <path d="M300 212 L420 286"/>
+      <path d="M360 240 L480 330"/>
+
+      <path d="M540 260 L462 260"/>
+      <path d="M462 260 L392 260"/>
+      <path d="M392 260 L426 260"/>
+      <path d="M420 760 L370 668"/>
+      <path d="M370 668 L322 586"/>
+      <path d="M322 586 L346 626"/>
+      <path d="M-120 500 L-60 492"/>
+      <path d="M-60 492 L0 488"/>
+      <path d="M0 488 L58 488"/>
+    </g>
+  </g>
+
+  <!-- Subtle particles for technical atmosphere -->
+  <g opacity="0.55">
+    <circle cx="1520" cy="320" r="2" fill="#9de7ff"/>
+    <circle cx="1645" cy="410" r="1.8" fill="#8addff"/>
+    <circle cx="1820" cy="505" r="1.7" fill="#7ed7ff"/>
+    <circle cx="2080" cy="660" r="2" fill="#9ce8ff"/>
+    <circle cx="2210" cy="845" r="1.8" fill="#7ad2ff"/>
+    <circle cx="1990" cy="980" r="1.6" fill="#6cc8ff"/>
+    <circle cx="1710" cy="1120" r="1.8" fill="#9adfff"/>
+  </g>
+</svg>

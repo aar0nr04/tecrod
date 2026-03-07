@@ -80,7 +80,7 @@ img{max-width:100%;display:block}
     radial-gradient(1200px 600px at 70% 30%, rgba(80,160,255,.22), transparent 60%),
     radial-gradient(900px 500px at 35% 20%, rgba(255,140,80,.16), transparent 55%),
     linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.70)),
-    url("./assets/hero.jpg");
+    url("./assets/hero-cfd-blue.png");
   background-size:cover;
   background-position:center;
   filter:saturate(1.05) contrast(1.05);
@@ -110,6 +110,19 @@ img{max-width:100%;display:block}
   border-radius:var(--radius);
   box-shadow:var(--shadow);
   padding:16px 16px 18px;
+}
+.card__media{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:12px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(0,0,0,.16);
+}
+html[data-theme="light"] .card__media{
+  border-color:rgba(12,26,50,.16);
+  background:rgba(255,255,255,.85);
 }
 .card h3{margin:0 0 6px;font-size:16px}
 .card p{margin:0;color:rgba(255,255,255,.76);font-size:13.5px;line-height:1.55}
@@ -293,7 +306,7 @@ html[data-theme="light"] .hero__bg{
     radial-gradient(1200px 600px at 70% 30%, rgba(20,90,170,.22), transparent 60%),
     radial-gradient(900px 500px at 35% 20%, rgba(255,165,76,.16), transparent 55%),
     linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.55)),
-    url("./assets/hero.jpg");
+    url("./assets/hero-cfd-blue.png");
 }
 html[data-theme="light"] .hero h1,
 html[data-theme="light"] .hero p{
@@ -328,3 +341,4 @@ html[data-theme="light"] .contact__form textarea{
   color:#11233f;
 }
 html[data-theme="light"] .footer__links a:hover{color:#0b1f3d}
+

@@ -23,10 +23,9 @@ img{max-width:100%;display:block}
 }
 .header__inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:18px}
 
-.brand{display:flex;align-items:center;gap:10px}
-.brand__mark{width:40px;height:40px;border-radius:10px;overflow:hidden;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10)}
-.brand__mark img{width:100%;height:100%;object-fit:contain;padding:4px}
-.brand__name{font-weight:800;letter-spacing:.5px}
+.brand{display:flex;align-items:center;gap:0}
+.brand__mark{width:190px;height:64px;border-radius:12px;overflow:hidden;display:grid;place-items:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10)}
+.brand__mark img{width:100%;height:100%;object-fit:contain;padding:3px}
 
 .nav{display:flex;gap:18px;color:rgba(255,255,255,.86);font-weight:500}
 .nav a{padding:8px 10px;border-radius:10px}
@@ -239,6 +238,7 @@ html[data-theme="light"] .card__media{
 .footer__links a:hover{color:#fff}
 
 @media (max-width: 900px){
+  .brand__mark{width:155px;height:52px}
   .nav{display:none}
   .cards{grid-template-columns:1fr}
   .cases{grid-template-columns:1fr}
@@ -451,5 +451,7 @@ html[data-theme="light"] .service-hero-content p{
 }
 
 @media (max-width: 900px){
+  .brand__mark{width:155px;height:52px}
   .service-grid{grid-template-columns:1fr}
 }
+

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Herramienta preliminar TECROD para turbinas de vapor | TECROD</title>
+  <meta name="description" content="Estimador educativo basado en Mollier para escalonamiento de turbinas de impulso." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../../" aria-label="Inicio TECROD">
+        <span class="brand__mark"><img class="brand__logo" src="../../../assets/tecrod-logo-dark.png" data-logo-dark="../../../assets/tecrod-logo-dark.png" data-logo-light="../../../assets/tecrod-logo-light.png" alt="Logo TECROD"></span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <a href="../../#home">Inicio</a>
+        <a href="../../#services">Servicios</a>
+        <a href="../../#work">Proyectos</a>
+        <a href="../">Herramientas</a>
+        <a href="../../#about">Acerca de</a>
+        <a href="../../#contact">Contacto</a>
+      </nav>
+
+      <div class="header__right">
+        <div class="theme" aria-label="Cambio de tema">
+          <button type="button" data-theme-toggle="dark">Dark</button>
+          <button type="button" data-theme-toggle="light">Light</button>
+        </div>
+        <div class="lang" aria-label="Cambio de idioma">
+          <button type="button" data-lang="en" data-lang-target="../../../en/tools/steam-turbine/">EN</button>
+          <button type="button" data-lang="es" data-lang-target="./">ES</button>
+        </div>
+        <a class="btn btn--primary" href="../../#contact">Solicitar cotización</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="tool-steam-turbine" data-lang="es">
+    <section class="tool-shell">
+      <div class="container">
+        <a class="back-link" href="../">Volver a herramientas de ingeniería</a>
+        <div class="tool-kicker">Panel de ingeniería TECROD <span class="tool-badge">V1.5</span></div>
+        <h1 class="tool-title">Herramienta preliminar TECROD para turbinas de vapor</h1>
+        <p class="tool-subtitle">Estimador educativo basado en Mollier para escalonamiento de turbinas de impulso</p>
+        <div class="tool-top-actions">
+          <a class="btn btn--outline" href="../../../en/tools/steam-turbine/">View in English</a>
+        </div>
+
+        <div class="tool-warning">
+          <strong>Uso educativo solamente.</strong> La V1.5 es un estimador preliminar educativo. Las propiedades del vapor pueden introducirse manualmente desde un diagrama de Mollier o estimarse mediante una aproximación simplificada de vapor como gas ideal. No es para diseño final, certificación ni decisiones críticas de seguridad.
+          <p class="tool-note">Versiones futuras podrían reemplazar el estimador simplificado con cálculos locales IAPWS-IF97 o una malla precalculada de propiedades de vapor.</p>
+        </div>
+
+        <div class="tool-dashboard">
+          <aside class="tool-panel" aria-label="Entradas">
+            <h2>Entradas</h2>
+            <div class="tool-input-grid">
+              <fieldset class="tool-radio-group">
+                <legend>Modo de cálculo</legend>
+                <label class="tool-radio-row"><input type="radio" name="calculationMode" value="knownFlow" checked> Calcular potencia desde flujo másico</label>
+                <label class="tool-radio-row"><input type="radio" name="calculationMode" value="requiredFlow"> Calcular flujo másico requerido</label>
+              </fieldset>
+
+              <fieldset class="tool-radio-group">
+                <legend>Fuente de h2'</legend>
+                <label class="tool-radio-row"><input type="radio" name="h2sSource" value="manual" checked> Entrada manual de Mollier</label>
+                <label class="tool-radio-row"><input type="radio" name="h2sSource" value="approximate"> Estimador aproximado de gas ideal</label>
+                <p class="tool-note">El modo aproximado considera el vapor sobrecalentado como gas ideal con cp constante. Es útil solo para visualización educativa y no debe usarse en regiones de vapor húmedo, cerca de saturación ni para diseño final.</p>
+              </fieldset>
+
+              <div class="tool-field"><label for="p1">Presión de entrada P1</label><div class="tool-field__control"><input id="p1" type="number" value="600" step="1"><span class="tool-unit">psig</span></div></div>
+              <div class="tool-field"><label for="t1">Temperatura de entrada T1</label><div class="tool-field__control"><input id="t1" type="number" value="750" step="1"><span class="tool-unit">&deg;F</span></div></div>
+              <div class="tool-field"><label for="p2">Presión de escape P2</label><div class="tool-field__control"><input id="p2" type="number" value="150" step="1"><span class="tool-unit">psig</span></div></div>
+              <div class="tool-field"><label for="h1">Entalpía de entrada h1</label><div class="tool-field__control"><input id="h1" type="number" value="1376.4" step="0.1"><span class="tool-unit">Btu/lbm</span></div></div>
+              <div class="tool-field"><label for="h2s">Entalpía ideal de escape h2'</label><div class="tool-field__control"><input id="h2s" type="number" value="1226.8" step="0.1"><span class="tool-unit">Btu/lbm</span></div></div>
+              <div class="tool-field"><label for="eta">Eficiencia de turbina / etapa eta</label><div class="tool-field__control"><input id="eta" type="number" value="0.90" min="0.1" max="1" step="0.01"><span class="tool-unit">-</span></div></div>
+              <div class="tool-field"><label for="mechanicalLoss">Pérdidas mecánicas</label><div class="tool-field__control"><input id="mechanicalLoss" type="number" value="2" min="0" max="50" step="0.1"><span class="tool-unit">%</span></div></div>
+              <div class="tool-field"><label for="massFlow">Flujo másico</label><div class="tool-field__control"><input id="massFlow" type="number" value="18948" step="1"><span class="tool-unit">lbm/hr</span></div></div>
+              <div class="tool-field"><label for="targetPower">Potencia objetivo de eje</label><div class="tool-field__control"><input id="targetPower" type="number" value="500" step="1"><span class="tool-unit">kW</span></div></div>
+              <div class="tool-field"><label for="rpm">RPM</label><div class="tool-field__control"><input id="rpm" type="number" value="4000" step="10"><span class="tool-unit">rpm</span></div></div>
+              <div class="tool-field"><label for="diameter">Diámetro medio de rueda Dm</label><div class="tool-field__control"><input id="diameter" type="number" value="700" step="1"><span class="tool-unit">mm</span></div></div>
+              <div class="tool-field"><label for="alpha">Ángulo de tobera / flujo alpha</label><div class="tool-field__control"><input id="alpha" type="number" value="15" step="0.5"><span class="tool-unit">deg</span></div></div>
+            </div>
+            <div class="tool-actions">
+              <button class="btn btn--primary" type="button" id="recalculateButton">Recalcular</button>
+            </div>
+            <div class="tool-status" id="toolWarnings" hidden>
+              <ul id="warningList"></ul>
+            </div>
+          </aside>
+
+          <section class="tool-panel mollier-wrap" aria-label="Diagrama h-s de Mollier">
+            <h2>Diagrama h-s de Mollier (esquemático)</h2>
+            <svg class="mollier-chart" id="mollierChart" role="img" aria-label="Diagrama h-s de Mollier esquemático"></svg>
+          </section>
+
+          <aside class="tool-panel" aria-label="Resultados y ecuaciones">
+            <h2>Resultados</h2>
+            <div class="result-grid">
+              <div class="result-card"><span class="result-label">h1</span><span class="result-value"><span data-result="h1"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card"><span class="result-label">h2' ideal</span><span class="result-value"><span data-result="h2s"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card"><span class="result-label">h2 real</span><span class="result-value"><span data-result="h2_actual"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card"><span class="result-label">Delta h ideal</span><span class="result-value"><span data-result="deltaH_ideal"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card"><span class="result-label">Delta h real</span><span class="result-value"><span data-result="deltaH_actual"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card" data-optional="t2s" hidden><span class="result-label">T2s</span><span class="result-value"><span data-result="T2s_F"></span> <span class="result-unit">&deg;F</span></span></div>
+              <div class="result-card"><span class="result-label">Velocidad periférica U</span><span class="result-value"><span data-result="U_ft_s"></span> <span class="result-unit">ft/s</span></span></div>
+              <div class="result-card"><span class="result-label">Caída de entalpía por etapa</span><span class="result-value"><span data-result="deltaH_stage"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card"><span class="result-label">Etapas estimadas</span><span class="result-value"><span data-result="stageCount"></span></span></div>
+              <div class="result-card"><span class="result-label">Etapas redondeadas</span><span class="result-value"><span data-result="roundedNearestStages"></span> <span class="result-unit">cercano</span></span></div>
+              <div class="result-card"><span class="result-label">Etapas redondeadas hacia arriba</span><span class="result-value"><span data-result="roundedUpStages"></span></span></div>
+              <div class="result-card" data-mode-result="requiredFlow" hidden><span class="result-label">Flujo másico requerido</span><span class="result-value"><span data-result="requiredMassFlow_lbm_hr"></span> <span class="result-unit">lbm/hr</span></span></div>
+              <div class="result-card result-card--wide"><span class="result-label">Potencia neta de eje</span><span class="result-value"><span data-result="shaftPower_kW"></span> <span class="result-unit">kW</span></span></div>
+              <div class="result-card"><span class="result-label">Potencia en trayectoria de flujo</span><span class="result-value"><span data-result="flowPathPower_kW"></span> <span class="result-unit">kW</span></span></div>
+              <div class="result-card"><span class="result-label">Trabajo específico</span><span class="result-value"><span data-result="specificWork_Btu_lbm"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card"><span class="result-label">Trabajo específico</span><span class="result-value"><span data-result="specificWork_kJ_kg"></span> <span class="result-unit">kJ/kg</span></span></div>
+            </div>
+
+            <div class="equations">
+              <h2>Ecuaciones clave</h2>
+              <div class="equation">&Delta;h<sub>ideal</sub> = h1 - h2'</div>
+              <div class="equation">&Delta;h<sub>real</sub> = &eta; &Delta;h<sub>ideal</sub></div>
+              <div class="equation">h2 = h1 - &Delta;h<sub>real</sub></div>
+              <div class="equation">U = &pi; Dm N / 60</div>
+              <div class="equation">&Delta;h<sub>etapa</sub> = [ 2U / (223.8 cos &alpha;) ]<sup>2</sup></div>
+              <div class="equation">Ns = &Delta;h<sub>ideal</sub> / &Delta;h<sub>etapa</sub></div>
+              <div class="equation">P<sub>eje</sub> = m_dot &Delta;h<sub>real</sub> / 3413 x (1 - pérdidas mecánicas)</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="tool-panel">
+          <h2>Comparación por diámetro</h2>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Diámetro</th>
+                <th>U</th>
+                <th>Delta h etapa</th>
+                <th>Etapas estimadas</th>
+                <th>Redondeado</th>
+              </tr>
+            </thead>
+            <tbody id="comparisonBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Interpretación de ingeniería</h2>
+        <div class="interpretation-grid">
+          <article class="interpretation-card">El diagrama de Mollier permite estimar la caída de entalpía disponible entre las condiciones de entrada y escape.</article>
+          <article class="interpretation-card">En una expansión ideal de turbina, la entropía permanece aproximadamente constante.</article>
+          <article class="interpretation-card">Las turbinas reales tienen pérdidas, por lo que el estado real de salida tiene mayor entropía y menor caída útil de entalpía.</article>
+          <article class="interpretation-card">La caída de entalpía por etapa depende fuertemente de la velocidad periférica, que depende del diámetro y las RPM.</article>
+          <article class="interpretation-card">Un mayor diámetro medio aumenta la velocidad del álabe y puede reducir el número estimado de etapas.</article>
+          <article class="interpretation-card">Las componentes tangenciales de velocidad generan trabajo de eje mediante la ecuación de Euler, mientras que la velocidad axial es esencial para transportar el flujo másico a través de la etapa.</article>
+          <article class="interpretation-card">Esta herramienta está pensada para aprendizaje, visualización y razonamiento preliminar. El diseño final de turbinas requiere propiedades de vapor validadas, triángulos de velocidad detallados, análisis de esfuerzos, evaluación vibracional, restricciones de manufactura y validación física.</article>
+        </div>
+        <p class="future-note">Versiones futuras podrían reemplazar el estimador simplificado con cálculos locales IAPWS-IF97 o una malla precalculada de propiedades de vapor.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>&copy; <span id="year"></span> TECROD. Todos los derechos reservados.</span>
+      <div class="footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../script.js"></script>
+  <script src="../../../assets/steam-turbine-tool.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Herramientas de Ingeniería | TECROD</title>
+  <meta name="description" content="Calculadoras preliminares y herramientas visuales para ingeniería guiada por simulación." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../" aria-label="Inicio TECROD">
+        <span class="brand__mark"><img class="brand__logo" src="../../assets/tecrod-logo-dark.png" data-logo-dark="../../assets/tecrod-logo-dark.png" data-logo-light="../../assets/tecrod-logo-light.png" alt="Logo TECROD"></span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <a href="../#home">Inicio</a>
+        <a href="../#services">Servicios</a>
+        <a href="../#work">Proyectos</a>
+        <a href="./">Herramientas</a>
+        <a href="../#about">Acerca de</a>
+        <a href="../#contact">Contacto</a>
+      </nav>
+
+      <div class="header__right">
+        <div class="theme" aria-label="Cambio de tema">
+          <button type="button" data-theme-toggle="dark">Dark</button>
+          <button type="button" data-theme-toggle="light">Light</button>
+        </div>
+        <div class="lang" aria-label="Cambio de idioma">
+          <button type="button" data-lang="en" data-lang-target="../../en/tools/">EN</button>
+          <button type="button" data-lang="es" data-lang-target="./">ES</button>
+        </div>
+        <a class="btn btn--primary" href="../#contact">Solicitar cotización</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="tools-page">
+    <section class="section tools-hero">
+      <div class="container">
+        <a class="back-link" href="../#work">Volver a TECROD</a>
+        <div class="tools-heading">
+          <h1>Herramientas de Ingeniería</h1>
+          <p>Calculadoras preliminares y herramientas visuales para ingeniería guiada por simulación.</p>
+        </div>
+        <div class="tools-grid">
+          <article class="tool-card">
+            <h2>Herramienta preliminar de diseño para turbinas de vapor</h2>
+            <p>Estimador educativo basado en Mollier para escalonamiento de turbinas de impulso.</p>
+            <a class="btn btn--primary" href="./turbina-vapor/">Abrir herramienta</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>&copy; <span id="year"></span> TECROD. Todos los derechos reservados.</span>
+      <div class="footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

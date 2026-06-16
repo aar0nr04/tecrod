@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TECROD Steam Turbine Preliminary Design Tool | TECROD</title>
+  <meta name="description" content="Mollier-based educational estimator for impulse turbine staging." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../../" aria-label="TECROD Home">
+        <span class="brand__mark"><img class="brand__logo" src="../../../assets/tecrod-logo-dark.png" data-logo-dark="../../../assets/tecrod-logo-dark.png" data-logo-light="../../../assets/tecrod-logo-light.png" alt="TECROD logo"></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="../../#home">Home</a>
+        <a href="../../#services">Services</a>
+        <a href="../../#work">Work</a>
+        <a href="../">Tools</a>
+        <a href="../../#about">About</a>
+        <a href="../../#contact">Contact</a>
+      </nav>
+
+      <div class="header__right">
+        <div class="theme" aria-label="Theme switch">
+          <button type="button" data-theme-toggle="dark">Dark</button>
+          <button type="button" data-theme-toggle="light">Light</button>
+        </div>
+        <div class="lang" aria-label="Language switch">
+          <button type="button" data-lang="en" data-lang-target="./">EN</button>
+          <button type="button" data-lang="es" data-lang-target="../../../es/herramientas/turbina-vapor/">ES</button>
+        </div>
+        <a class="btn btn--primary" href="../../#contact">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="tool-steam-turbine" data-lang="en">
+    <section class="tool-shell">
+      <div class="container">
+        <a class="back-link" href="../">Back to engineering tools</a>
+        <div class="tool-kicker">TECROD engineering dashboard <span class="tool-badge">V1.5</span></div>
+        <h1 class="tool-title">TECROD Steam Turbine Preliminary Design Tool</h1>
+        <p class="tool-subtitle">Mollier-based educational estimator for impulse turbine staging</p>
+        <div class="tool-top-actions">
+          <a class="btn btn--outline" href="../../../es/herramientas/turbina-vapor/">Ver en español</a>
+        </div>
+
+        <div class="tool-warning">
+          <strong>Educational use only.</strong> V1.5 is an educational preliminary estimator. Steam properties may be entered manually from a Mollier chart or estimated using a simplified ideal-gas steam approximation. Not for final design, certification, or safety-critical decisions.
+          <p class="tool-note">Future versions may replace the simplified estimator with local IAPWS-IF97 steam-property calculations or a precomputed steam-properties grid.</p>
+        </div>
+
+        <div class="tool-dashboard">
+          <aside class="tool-panel" aria-label="Inputs">
+            <h2>Inputs</h2>
+            <div class="tool-input-grid">
+              <fieldset class="tool-radio-group">
+                <legend>Calculation mode</legend>
+                <label class="tool-radio-row"><input type="radio" name="calculationMode" value="knownFlow" checked> Calculate power from mass flow</label>
+                <label class="tool-radio-row"><input type="radio" name="calculationMode" value="requiredFlow"> Calculate required mass flow</label>
+              </fieldset>
+
+              <fieldset class="tool-radio-group">
+                <legend>h2' source</legend>
+                <label class="tool-radio-row"><input type="radio" name="h2sSource" value="manual" checked> Manual Mollier input</label>
+                <label class="tool-radio-row"><input type="radio" name="h2sSource" value="approximate"> Approximate ideal-gas estimator</label>
+                <p class="tool-note">Approximate mode assumes superheated steam as an ideal gas with constant cp. It is useful for educational visualization only and should not be used in wet-steam regions, near saturation, or for final design.</p>
+              </fieldset>
+
+              <div class="tool-field"><label for="p1">Inlet pressure P1</label><div class="tool-field__control"><input id="p1" type="number" value="600" step="1"><span class="tool-unit">psig</span></div></div>
+              <div class="tool-field"><label for="t1">Inlet temperature T1</label><div class="tool-field__control"><input id="t1" type="number" value="750" step="1"><span class="tool-unit">&deg;F</span></div></div>
+              <div class="tool-field"><label for="p2">Exhaust pressure P2</label><div class="tool-field__control"><input id="p2" type="number" value="150" step="1"><span class="tool-unit">psig</span></div></div>
+              <div class="tool-field"><label for="h1">Inlet enthalpy h1</label><div class="tool-field__control"><input id="h1" type="number" value="1376.4" step="0.1"><span class="tool-unit">Btu/lbm</span></div></div>
+              <div class="tool-field"><label for="h2s">Ideal exhaust enthalpy h2'</label><div class="tool-field__control"><input id="h2s" type="number" value="1226.8" step="0.1"><span class="tool-unit">Btu/lbm</span></div></div>
+              <div class="tool-field"><label for="eta">Turbine / stage efficiency eta</label><div class="tool-field__control"><input id="eta" type="number" value="0.90" min="0.1" max="1" step="0.01"><span class="tool-unit">-</span></div></div>
+              <div class="tool-field"><label for="mechanicalLoss">Mechanical losses</label><div class="tool-field__control"><input id="mechanicalLoss" type="number" value="2" min="0" max="50" step="0.1"><span class="tool-unit">%</span></div></div>
+              <div class="tool-field"><label for="massFlow">Mass flow</label><div class="tool-field__control"><input id="massFlow" type="number" value="18948" step="1"><span class="tool-unit">lbm/hr</span></div></div>
+              <div class="tool-field"><label for="targetPower">Target shaft power output</label><div class="tool-field__control"><input id="targetPower" type="number" value="500" step="1"><span class="tool-unit">kW</span></div></div>
+              <div class="tool-field"><label for="rpm">RPM</label><div class="tool-field__control"><input id="rpm" type="number" value="4000" step="10"><span class="tool-unit">rpm</span></div></div>
+              <div class="tool-field"><label for="diameter">Mean wheel diameter Dm</label><div class="tool-field__control"><input id="diameter" type="number" value="700" step="1"><span class="tool-unit">mm</span></div></div>
+              <div class="tool-field"><label for="alpha">Nozzle / flow angle alpha</label><div class="tool-field__control"><input id="alpha" type="number" value="15" step="0.5"><span class="tool-unit">deg</span></div></div>
+            </div>
+            <div class="tool-actions">
+              <button class="btn btn--primary" type="button" id="recalculateButton">Recalculate</button>
+            </div>
+            <div class="tool-status" id="toolWarnings" hidden>
+              <ul id="warningList"></ul>
+            </div>
+          </aside>
+
+          <section class="tool-panel mollier-wrap" aria-label="Mollier h-s diagram">
+            <h2>Mollier h-s diagram (schematic)</h2>
+            <svg class="mollier-chart" id="mollierChart" role="img" aria-label="Schematic Mollier h-s diagram"></svg>
+          </section>
+
+          <aside class="tool-panel" aria-label="Results and equations">
+            <h2>Results</h2>
+            <div class="result-grid">
+              <div class="result-card"><span class="result-label">h1</span><span class="result-value"><span data-result="h1"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card"><span class="result-label">h2' ideal</span><span class="result-value"><span data-result="h2s"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card"><span class="result-label">h2 actual</span><span class="result-value"><span data-result="h2_actual"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card"><span class="result-label">Delta h ideal</span><span class="result-value"><span data-result="deltaH_ideal"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card"><span class="result-label">Delta h actual</span><span class="result-value"><span data-result="deltaH_actual"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card" data-optional="t2s" hidden><span class="result-label">T2s</span><span class="result-value"><span data-result="T2s_F"></span> <span class="result-unit">&deg;F</span></span></div>
+              <div class="result-card"><span class="result-label">Peripheral speed U</span><span class="result-value"><span data-result="U_ft_s"></span> <span class="result-unit">ft/s</span></span></div>
+              <div class="result-card"><span class="result-label">Stage enthalpy drop</span><span class="result-value"><span data-result="deltaH_stage"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card"><span class="result-label">Estimated stages</span><span class="result-value"><span data-result="stageCount"></span></span></div>
+              <div class="result-card"><span class="result-label">Rounded stages</span><span class="result-value"><span data-result="roundedNearestStages"></span> <span class="result-unit">nearest</span></span></div>
+              <div class="result-card"><span class="result-label">Rounded up stages</span><span class="result-value"><span data-result="roundedUpStages"></span></span></div>
+              <div class="result-card" data-mode-result="requiredFlow" hidden><span class="result-label">Required mass flow</span><span class="result-value"><span data-result="requiredMassFlow_lbm_hr"></span> <span class="result-unit">lbm/hr</span></span></div>
+              <div class="result-card result-card--wide"><span class="result-label">Net shaft power</span><span class="result-value"><span data-result="shaftPower_kW"></span> <span class="result-unit">kW</span></span></div>
+              <div class="result-card"><span class="result-label">Flow path power</span><span class="result-value"><span data-result="flowPathPower_kW"></span> <span class="result-unit">kW</span></span></div>
+              <div class="result-card"><span class="result-label">Specific work</span><span class="result-value"><span data-result="specificWork_Btu_lbm"></span> <span class="result-unit">Btu/lbm</span></span></div>
+              <div class="result-card"><span class="result-label">Specific work</span><span class="result-value"><span data-result="specificWork_kJ_kg"></span> <span class="result-unit">kJ/kg</span></span></div>
+            </div>
+
+            <div class="equations">
+              <h2>Key equations</h2>
+              <div class="equation">&Delta;h<sub>ideal</sub> = h1 - h2'</div>
+              <div class="equation">&Delta;h<sub>actual</sub> = &eta; &Delta;h<sub>ideal</sub></div>
+              <div class="equation">h2 = h1 - &Delta;h<sub>actual</sub></div>
+              <div class="equation">U = &pi; Dm N / 60</div>
+              <div class="equation">&Delta;h<sub>stage</sub> = [ 2U / (223.8 cos &alpha;) ]<sup>2</sup></div>
+              <div class="equation">Ns = &Delta;h<sub>ideal</sub> / &Delta;h<sub>stage</sub></div>
+              <div class="equation">P<sub>shaft</sub> = m_dot &Delta;h<sub>actual</sub> / 3413 x (1 - mechanical losses)</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="tool-panel">
+          <h2>Diameter comparison</h2>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Diameter</th>
+                <th>U</th>
+                <th>Delta h stage</th>
+                <th>Estimated stages</th>
+                <th>Rounded</th>
+              </tr>
+            </thead>
+            <tbody id="comparisonBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Engineering interpretation</h2>
+        <div class="interpretation-grid">
+          <article class="interpretation-card">The Mollier chart gives the available enthalpy drop between inlet and exhaust conditions.</article>
+          <article class="interpretation-card">For an ideal turbine expansion, entropy is approximately constant.</article>
+          <article class="interpretation-card">Real turbines have losses, so the actual outlet state has higher entropy and lower useful enthalpy drop.</article>
+          <article class="interpretation-card">The stage enthalpy drop depends strongly on peripheral speed, which depends on diameter and RPM.</article>
+          <article class="interpretation-card">A larger mean diameter increases blade speed and can reduce the estimated number of stages.</article>
+          <article class="interpretation-card">Tangential velocity components drive shaft work through Euler's turbine equation, while axial velocity is essential for carrying mass flow through the stage.</article>
+          <article class="interpretation-card">This tool is intended for early learning, visualization, and preliminary reasoning. Final turbine design requires validated steam properties, detailed velocity triangles, stress analysis, vibration evaluation, manufacturing constraints, and physical validation.</article>
+        </div>
+        <p class="future-note">Future versions may replace the simplified estimator with local IAPWS-IF97 steam-property calculations or a precomputed steam-properties grid.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>&copy; <span id="year"></span> TECROD. All rights reserved.</span>
+      <div class="footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../script.js"></script>
+  <script src="../../../assets/steam-turbine-tool.js"></script>
+</body>
+</html>

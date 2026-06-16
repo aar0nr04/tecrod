@@ -36,6 +36,11 @@
     btn.addEventListener("click", () => {
       const lang = btn.getAttribute("data-lang");
       setLang(lang);
+      const explicitTarget = btn.getAttribute("data-lang-target");
+      if (explicitTarget) {
+        window.location.href = explicitTarget;
+        return;
+      }
       const target = (lang === "es") ? "/es/" : "/en/";
       const parts = window.location.pathname.split("/").filter(Boolean);
       const first = parts.length ? parts[0] : "";
